@@ -1,3 +1,4 @@
+/*
 package com.example.Library;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -39,4 +40,4 @@ public class Adapter extends ArrayAdapter<List> {
         return Collections.singletonList(itemName.get(position).getTitle());
     }
 
-}
+}*/
