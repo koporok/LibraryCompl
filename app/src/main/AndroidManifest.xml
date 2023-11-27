@@ -17,10 +17,6 @@
             android:name="com.example.Library.BookActivity"
             android:exported="false"/>
 
-        <activity android:name="com.example.Library.AddActivity">
-
-    </activity>
-
         <activity
             android:name="com.example.Library.MainActivity"
             android:exported="true">

@@ -12,6 +12,7 @@ import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 
 import com.google.gson.Gson;
@@ -35,8 +36,9 @@ public class ServerAccessor {
      */
     public ArrayList<String> getStringListFromBookList(ArrayList<Book> BookList) {
         ArrayList<String> stringList = new ArrayList<>();
+        Log.d("TAG", "array");
         for (Book book : BookList) {
-            stringList.add(String.valueOf(book.getId()));
+            stringList.add(String.valueOf(book.getTitle()));
         }
         return stringList;
     }
@@ -64,8 +66,9 @@ public class ServerAccessor {
         ArrayList<Book> dataItems;
         try {
             Gson gson = new Gson();
-            Type listOfBooks = new TypeToken<ArrayList<Book>>() {
+            Type listOfBooks = new TypeToken<List<Book>>() {
             }.getType();
+            content = content.substring(13);content = content.substring(0, content.length() - 2);
             dataItems = gson.fromJson(content, listOfBooks);
             return dataItems;
         } catch (Exception ex) {

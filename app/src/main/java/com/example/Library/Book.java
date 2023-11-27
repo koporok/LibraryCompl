@@ -3,17 +3,18 @@ package com.example.Library;
 import java.io.Serializable;
 
 public class Book implements Serializable {
-    private int id;
+    public int id;
     public String title;
-    private String genre;
-    private String Author;
-    private String review;
+    public String genre;
+    public String author;
+    public String review;
     public Book() {
     }
-    public Book(String title, String genre, String Author, String review){
+    public Book(int id, String title, String author, String genre, String review){
+        this.id = id;
         this.title = title;
         this.genre = genre;
-        this.Author = Author;
+        this.author = author;
         this.review = review;
     }
     public int getId() {
@@ -41,11 +42,11 @@ public class Book implements Serializable {
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        author = author;
     }
 
     public String getReview() {
